@@ -513,6 +513,23 @@ nav {
   display: grid;
   gap: 1rem;
 }
+.blog__card{
+  animation: bordee 4s ease-in-out infinite;
+}
+@keyframes bordee {
+  0% {
+    
+    box-shadow: 0 0px 40px rgb(17, 37, 163);
+  }
+  50% {
+    
+    box-shadow: 0px 0px 350px rgb(1, 8, 53);
+  }
+  100% {
+    
+    box-shadow: 0 0px 40px rgb(17, 37, 163);
+  }
+}
 
 .blog__content {
   padding: 1rem;
@@ -744,4 +761,52 @@ nav {
 }
 .logo1{
   width: 20%;
+}
+
+
+.gallery {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #051215;
+}
+
+.gall{
+  max-width: 1000px;
+  width: 90%;
+  height: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  transition: grid-template-columns 0.5s ease;
+}
+
+.gall:has(.left:hover) {
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+}
+.gall:has(.center:hover) {
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+.gall:has(.right:hover) {
+  grid-template-columns: 0.5fr 0.5fr 2fr;
+}
+
+.gallimg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gall > div {
+  cursor: pointer;
+}
+
+.gallery2 {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #051215;
 }
